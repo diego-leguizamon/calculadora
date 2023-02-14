@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-formulario',
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
 })
 export class FormularioComponent {
 
+  @Output () sumar_1 = new EventEmitter<number>();
+  @Output () restar_1 = new EventEmitter<number>();
+  @Output () texto = new EventEmitter<string>();
+    
+  opera: number = 0;
+  operb: number = 0;
+  resultado: number = 0;
+
+  sumar():void{
+    this.resultado = this.opera + this.operb;
+    this.sumar_1.emit(this.resultado);
+  }
+  restar():void{
+    this.resultado = this.opera - this.operb;
+    this.restar_1.emit(this.resultado);
+  }
 }

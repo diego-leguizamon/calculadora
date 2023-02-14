@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,18 +10,18 @@ export class AppComponent {
   operA: number = 0;
   operB: number = 0;
   resultado: number = 0;
-  negativo: string =''
 
-  sumar():void{
-    this.resultado = this.operA + this.operB;
-    this.negativo ='';
+  suma(res:number){
+    this.resultado=res;
   }
-  restar():void{
-    this.resultado = this.operA - this.operB;
-    if(this.resultado < 0){
-      this.negativo = 'El resultado es negativo';
-    }else{
-      this.negativo = 'El resultado es positivo';
+
+  resta(res:number){
+    this.resultado = res;
+    if(res<0){
+      Swal.fire({
+        title:'Resultado Obtenido',
+        text:'El resultado es negativo: ' + res,
+      });
     }
   }
 }
