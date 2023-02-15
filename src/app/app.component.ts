@@ -12,7 +12,11 @@ export class AppComponent {
   resultado: number = 0;
 
   suma(res:number){
-    this.resultado=res;
+    //this.resultado=res;
+    Swal.fire({
+      title: 'Resultado Obtenido',
+      text:'El resultado es: ' + res,
+    })
   }
 
   resta(res:number){
@@ -21,6 +25,11 @@ export class AppComponent {
       Swal.fire({
         title:'Resultado Obtenido',
         text:'El resultado es negativo: ' + res,
+      });
+    }else{
+      Swal.fire({
+        title: 'Resultado Obtenido',
+        text:'El resultado obtenido es: '+res,
       });
     }
   }

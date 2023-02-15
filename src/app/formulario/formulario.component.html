@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container cont">
     <div class="row">
-        <div class="col-4">
+        <div class="col-md-8 col-lg-5 col-sm-12">
           <form action="">
             <div class="form-group">
               <label for="opera">Operando A</label>
@@ -11,8 +11,10 @@
               <input type="number" name="operb" id="operb" class="form-control" [(ngModel)]="operb">
             </div>
             <br>
-            <button type="submit" class="btn btn-primary" (click)="sumar()">Sumar</button>
-            <button type="submit" class="btn btn-danger" (click)="restar()">Restar</button>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary boton" (click)="sumar()">Sumar</button>
+              <button type="submit" class="btn btn-danger boton" (click)="restar()">Restar</button>
+            </div>
           </form>
         </div>
       </div>
