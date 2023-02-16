@@ -9,12 +9,12 @@
       <app-formulario (sumar_1)="suma($event)" (restar_1)="resta($event)"></app-formulario>
     </div>
   </div>
-</div>
-  <!--
+  <hr>
   <div class="row">
     <div class="col">
-      <p>Resultado: {{resultado}} </p>
+      <app-resultado
+      [resultadoHijo]= "resultadoPadre"
+      ></app-resultado>
     </div>
   </div>
 </div>
--->

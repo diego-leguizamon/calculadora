@@ -1,4 +1,3 @@
-import { outputAst } from '@angular/compiler';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -9,8 +8,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class FormularioComponent {
 
   @Output () sumar_1 = new EventEmitter<number>();
-  @Output () restar_1 = new EventEmitter<number>();
-  @Output () texto = new EventEmitter<string>();
+  @Output () restar_1 = new EventEmitter<number>(); 
     
   opera: number = 0;
   operb: number = 0;

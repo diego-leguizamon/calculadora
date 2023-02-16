@@ -7,12 +7,10 @@ import Swal from 'sweetalert2';
 })
 export class AppComponent {
   titulo = 'Calculadora';
-  operA: number = 0;
-  operB: number = 0;
-  resultado: number = 0;
+  resultadoPadre: number=0;
 
   suma(res:number){
-    //this.resultado=res;
+    this.resultadoPadre=res;
     Swal.fire({
       title: 'Resultado Obtenido',
       text:'El resultado es: ' + res,
@@ -20,7 +18,7 @@ export class AppComponent {
   }
 
   resta(res:number){
-    this.resultado = res;
+    this.resultadoPadre=res;
     if(res<0){
       Swal.fire({
         title:'Resultado Obtenido',
